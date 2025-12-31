@@ -259,15 +259,17 @@ footer {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 8%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;          /* keep all items on one line */
+  padding: 0.75rem 2%;        /* flexible horizontal padding */
+  width: 100%;
+  gap: 1rem;
 }
 
 .nav-logo {
@@ -275,21 +277,29 @@ footer {
   font-weight: 600;
   color: var(--primary);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* responsive font size */
+  flex-shrink: 1;              /* allow shrinking */
+  white-space: nowrap;         /* prevent wrapping */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-wrap: nowrap;           /* prevent links from wrapping */
+  gap: clamp(0.5rem, 1vw, 2rem); /* responsive gap */
   margin: 0;
   padding: 0;
+  flex-grow: 1;                /* take remaining space */
+  justify-content: flex-end;   /* push links to the right */
+  flex-shrink: 1;              /* allow links to shrink */
 }
 
 .nav-links a {
   text-decoration: none;
   font-weight: 500;
   color: var(--dark);
+  font-size: clamp(0.85rem, 2vw, 1rem); /* shrink text on small screens */
+  white-space: nowrap;         /* prevent link text from breaking */
 }
 
 .nav-links a:hover {
@@ -301,7 +311,30 @@ footer {
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   color: #000;
+  flex-shrink: 0;              /* prevent button from shrinking */
+  white-space: nowrap;
+  margin-left: 1rem;
 }
+
+/* Optional: for very small screens, stack links and CTA */
+@media (max-width: 480px) {
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+
 
 /* =====================
    Schools Table
