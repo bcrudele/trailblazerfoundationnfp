@@ -9,7 +9,7 @@
   /* Extracted / inferred from book cover */
   --primary: #c9472d;      /* adobe / terracotta red */
   --secondary: #ffc105;    /* maize gold (title text) */
-  --accent: #1f5f6f;       /* deep teal / aquatic tones */
+  --accent: #8dc5d3;       /* deep teal / aquatic tones */
   --light: #f9f4ee;        /* warm parchment */
   --dark: #2a2a2a;
   --black: #000000;
@@ -303,18 +303,60 @@ footer {
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: var(--light);
+  text-shadow: 0 1px 2px var(--black);
+}
+
+/* =====================
+   Gradient Navigation Buttons
+===================== */
+
+.nav-mission {
+  background: linear-gradient(90deg, var(--primary), #b53f29);
+}
+
+.nav-program {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.nav-schools {
+  background: linear-gradient(90deg, var(--accent), var(--accent));
+}
+
+.nav-board {
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
 }
 
 .nav-cta {
-  background: var(--secondary);
+  background: linear-gradient(90deg, var(--secondary), #ffd54f);
+}
+
+/* Shared button styling */
+.nav-mission,
+.nav-program,
+.nav-schools,
+.nav-board,
+.nav-cta {
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   color: #000;
-  flex-shrink: 0;              /* prevent button from shrinking */
+  font-weight: 500;
+  text-decoration: none;
+  flex-shrink: 0;
   white-space: nowrap;
   margin-left: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.nav-mission:hover,
+.nav-program:hover,
+.nav-schools:hover,
+.nav-board:hover,
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 
 /* Optional: for very small screens, stack links and CTA */
 @media (max-width: 480px) {
