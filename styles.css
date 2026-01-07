@@ -370,12 +370,28 @@ footer {
     margin-top: 0.5rem;
   }
 
-  .nav-cta {
+.nav-mission,
+.nav-program,
+.nav-schools,
+.nav-board,
+.nav-cta {
     margin-left: 0;
     margin-top: 0.5rem;
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.6rem;
+    margin-left: 0;    
+  }
+}
 
 
 /* =====================
