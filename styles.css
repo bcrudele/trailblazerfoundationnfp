@@ -331,12 +331,17 @@ footer {
   background: linear-gradient(90deg, var(--secondary), #ffd54f);
 }
 
+.nav-video {
+  background: linear-gradient(90deg, #ffd54f, #ffffff);
+}
+
 /* Shared button styling */
 .nav-mission,
 .nav-program,
 .nav-schools,
 .nav-board,
-.nav-cta {
+.nav-cta,
+.nav-video {
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   color: #000;
@@ -444,4 +449,108 @@ footer {
     padding: 0.5rem 0.75rem;
     font-size: 0.95rem;
   }
+}
+
+/* =====================
+   BOARD OF DIRECTORS
+===================== */
+
+.board-header h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.board-header hr {
+  width: 120px;
+  border: none;
+  border-top: 3px solid var(--primary);
+  margin: 0 auto;
+}
+
+/* Desktop layout */
+.board-member {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Left column */
+.board-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-left img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Contact info */
+.board-contact {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.board-contact strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.board-contact span {
+  display: block;
+}
+
+.board-contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.board-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Bio */
+.board-bio {
+  max-width: 680px;
+}
+
+/* =====================
+   MOBILE RESTRUCTURE
+===================== */
+
+@media (max-width: 900px) {
+  .board-member {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  /* Top row: image left, contact right */
+  .board-left {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .board-left img {
+    margin-bottom: 0;
+  }
+
+  .board-contact {
+    font-size: 0.9rem;
+  }
+
+  /* Bio full width below */
+  .board-bio {
+    max-width: 100%;
+  }
+}
+
+/* Prevent any accidental overflow */
+body {
+  overflow-x: hidden;
 }
