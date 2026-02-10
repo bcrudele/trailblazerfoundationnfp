@@ -554,3 +554,22 @@ footer {
 body {
   overflow-x: hidden;
 }
+
+/* Donate */
+
+.donate-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.donate-option strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.donate-logo {
+  height: 20px;
+  width: auto;
+}
