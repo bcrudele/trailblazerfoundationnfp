@@ -335,13 +335,19 @@ footer {
   background: linear-gradient(90deg, #ffd54f, #ffffff);
 }
 
+.nav-video2 {
+
+  background: linear-gradient(90deg, #ffffff, #c9ccbc);
+}
+
 /* Shared button styling */
 .nav-mission,
 .nav-program,
 .nav-schools,
 .nav-board,
 .nav-cta,
-.nav-video {
+.nav-video,
+.nav-video2 {
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   color: #000;
@@ -357,11 +363,12 @@ footer {
 .nav-program:hover,
 .nav-schools:hover,
 .nav-board:hover,
-.nav-cta:hover {
+.nav-cta:hover,
+.nav-video:hover,
+.nav-video2:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
 
 /* Optional: for very small screens, stack links and CTA */
 @media (max-width: 480px) {
@@ -379,7 +386,9 @@ footer {
 .nav-program,
 .nav-schools,
 .nav-board,
-.nav-cta {
+.nav-cta,
+.nav-video,
+.nav-video2 {
     margin-left: 0;
     margin-top: 0.5rem;
   }
