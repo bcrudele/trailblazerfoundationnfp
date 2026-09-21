@@ -7,10 +7,14 @@
 
 :root {
   /* Extracted / inferred from book cover */
-  --primary: #c9472d;      /* adobe / terracotta red */
-  --secondary: #ffc105;    /* maize gold (title text) */
-  --accent: #8dc5d3;       /* deep teal / aquatic tones */
-  --light: #f9f4ee;        /* warm parchment */
+  --primary: #c9472d;
+  /* adobe / terracotta red */
+  --secondary: #ffc105;
+  /* maize gold (title text) */
+  --accent: #8dc5d3;
+  /* deep teal / aquatic tones */
+  --light: #f9f4ee;
+  /* warm parchment */
   --dark: #2a2a2a;
   --black: #000000;
 }
@@ -30,7 +34,8 @@ body {
 }
 
 /* Headings: academic / book-title inspired */
-h1, h2 {
+h1,
+h2 {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   letter-spacing: 0.03em;
 }
@@ -89,7 +94,7 @@ h2 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
 /* Sections */
@@ -121,12 +126,10 @@ h2 {
 .image-placeholder {
   width: 100%;
   height: 300px;
-  background: linear-gradient(
-    135deg,
-    var(--accent),
-    var(--primary),
-    var(--secondary)
-  );
+  background: linear-gradient(135deg,
+      var(--accent),
+      var(--primary),
+      var(--secondary));
   border-radius: 14px;
   opacity: 0.95;
 }
@@ -177,8 +180,13 @@ footer {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive */
@@ -228,11 +236,9 @@ footer {
 .fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(
-    90deg,
-    #c63d2f,
-    #e2b23a
-  );
+  background: linear-gradient(90deg,
+      #c63d2f,
+      #e2b23a);
   border-radius: 6px;
   transition: width 1.6s ease-out;
 }
@@ -266,8 +272,10 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;          /* keep all items on one line */
-  padding: 0.75rem 2%;        /* flexible horizontal padding */
+  flex-wrap: nowrap;
+  /* keep all items on one line */
+  padding: 0.75rem 2%;
+  /* flexible horizontal padding */
   width: 100%;
   gap: 1rem;
 }
@@ -277,32 +285,44 @@ footer {
   font-weight: 600;
   color: var(--primary);
   text-decoration: none;
-  font-size: clamp(1rem, 2.5vw, 1.2rem); /* responsive font size */
-  flex-shrink: 1;              /* allow shrinking */
-  white-space: nowrap;         /* prevent wrapping */
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  /* responsive font size */
+  flex-shrink: 1;
+  /* allow shrinking */
+  white-space: nowrap;
+  /* prevent wrapping */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;           /* prevent links from wrapping */
-  gap: clamp(0.5rem, 1vw, 2rem); /* responsive gap */
+  flex-wrap: nowrap;
+  /* prevent links from wrapping */
+  gap: clamp(0.5rem, 1vw, 2rem);
+  /* responsive gap */
   margin: 0;
   padding: 0;
-  flex-grow: 1;                /* take remaining space */
-  justify-content: flex-end;   /* push links to the right */
-  flex-shrink: 1;              /* allow links to shrink */
+  flex-grow: 1;
+  /* take remaining space */
+  justify-content: flex-end;
+  /* push links to the right */
+  flex-shrink: 1;
+  /* allow links to shrink */
 }
 
-.nav-links a {
+.nav-links a,
+.media-button {
   text-decoration: none;
   font-weight: 500;
   color: var(--dark);
-  font-size: clamp(0.85rem, 2vw, 1rem); /* shrink text on small screens */
-  white-space: nowrap;         /* prevent link text from breaking */
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  /* shrink text on small screens */
+  white-space: nowrap;
+  /* prevent link text from breaking */
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.media-button:hover {
   color: var(--light);
   text-shadow: 0 1px 2px var(--black);
 }
@@ -340,6 +360,10 @@ footer {
   background: linear-gradient(90deg, #ffffff, #c9ccbc);
 }
 
+.media-button {
+  background: linear-gradient(90deg, #ffd54f, var(--primary));
+}
+
 /* Shared button styling */
 .nav-mission,
 .nav-program,
@@ -347,15 +371,16 @@ footer {
 .nav-board,
 .nav-cta,
 .nav-video,
-.nav-video2 {
-  padding: 0.4rem 0.8rem;
+.nav-video2,
+.media-button {
+  padding: 0.35rem 0.8rem;
   border-radius: 4px;
   color: #000;
   font-weight: 500;
   text-decoration: none;
   flex-shrink: 0;
   white-space: nowrap;
-  margin-left: 1rem;
+  margin-left: 0rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -365,9 +390,10 @@ footer {
 .nav-board:hover,
 .nav-cta:hover,
 .nav-video:hover,
-.nav-video2:hover {
+.nav-video2:hover,
+.media-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Optional: for very small screens, stack links and CTA */
@@ -382,15 +408,16 @@ footer {
     margin-top: 0.5rem;
   }
 
-.nav-mission,
-.nav-program,
-.nav-schools,
-.nav-board,
-.nav-cta,
-.nav-video,
-.nav-video2 {
+  .nav-mission,
+  .nav-program,
+  .nav-schools,
+  .nav-board,
+  .nav-cta,
+  .nav-video,
+  .nav-video2,
+  .media-button {
     margin-left: 0;
-    margin-top: 0.5rem;
+    margin-top: 0.0rem;
   }
 }
 
@@ -400,10 +427,11 @@ footer {
     justify-content: center;
   }
 
-  .nav-links a {
+  .nav-links a,
+  .media-button {
     font-size: 0.85rem;
     padding: 0.35rem 0.6rem;
-    margin-left: 0;    
+    margin-left: 0;
   }
 }
 
@@ -417,7 +445,6 @@ footer {
   max-width: 900px;
   margin: 2rem auto;
   border-collapse: collapse;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .schools-table th,
@@ -434,7 +461,8 @@ footer {
 }
 
 .schools-table tbody tr:nth-child(even) {
-  background-color: #f9f4ee; /* light parchment stripe */
+  background-color: #f9f4ee;
+  /* light parchment stripe */
 }
 
 .schools-table tbody td:first-child {
@@ -453,6 +481,7 @@ footer {
 
 /* Responsive for small screens */
 @media (max-width: 600px) {
+
   .schools-table th,
   .schools-table td {
     padding: 0.5rem 0.75rem;
@@ -581,4 +610,62 @@ body {
 .donate-logo {
   height: 20px;
   width: auto;
+}
+
+/* =====================
+   MEDIA DROPDOWN
+   ===================== */
+
+.media-button {
+  border: none;
+  font-family: inherit;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.media-dropdown {
+  position: relative;
+}
+
+.media-menu {
+  font-family: 'Inter', sans-serif;
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: 260px;
+  background: var(--light);
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0.4rem 0;
+}
+
+.media-menu.show {
+  display: block;
+}
+
+.media-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.media-menu li {
+  margin: 0;
+}
+
+.media-menu a {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  padding: 0.7rem 1rem;
+  color: var(--dark);
+  text-decoration: none;
+  white-space: normal;
+}
+
+.media-menu a:hover {
+  background: rgba(23, 112, 185, 0.5);
 }
